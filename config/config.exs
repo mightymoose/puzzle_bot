@@ -11,6 +11,17 @@ config :puzzle_bot,
   ecto_repos: [PuzzleBot.Repo],
   generators: [binary_id: true]
 
+config :tailwind,
+  version: "3.1.6",
+  default: [
+    args: ~w(
+      --config=tailwind.config.js
+      --input=css/app.css
+      --output=../priv/static/assets/app.css
+    ),
+    cd: Path.expand("../assets", __DIR__)
+  ]
+
 # Configures the endpoint
 config :puzzle_bot, PuzzleBotWeb.Endpoint,
   url: [host: "localhost"],
