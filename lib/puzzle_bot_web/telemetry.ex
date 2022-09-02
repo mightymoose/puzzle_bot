@@ -1,4 +1,7 @@
 defmodule PuzzleBotWeb.Telemetry do
+  @moduledoc """
+  The module for defining metrics
+  """
   use Supervisor
   import Telemetry.Metrics
 
